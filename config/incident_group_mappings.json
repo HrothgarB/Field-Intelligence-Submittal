@@ -1,0 +1,30 @@
+{
+  "incident_groups": {
+    "property_crime": [
+      "BURGLARY",
+      "THEFT",
+      "AUTO THEFT",
+      "VANDALISM"
+    ],
+    "violent_crime": [
+      "ASSAULT",
+      "ROBBERY",
+      "DOMESTIC VIOLENCE"
+    ],
+    "suspicious_activity": [
+      "SUSPICIOUS PERSON",
+      "SUSPICIOUS VEHICLE",
+      "SUSPICIOUS CIRCUMSTANCE"
+    ],
+    "traffic_stops": [
+      "TRAFFIC STOP",
+      "DUI",
+      "RECKLESS DRIVER"
+    ],
+    "proactive_activity": [
+      "AREA CHECK",
+      "FOOT PATROL",
+      "COMMUNITY CONTACT"
+    ]
+  }
+}
