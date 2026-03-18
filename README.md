@@ -44,12 +44,52 @@ config/incident_group_mappings.json
 outputs/
 ```
 
-## Installation
+## Detailed Installation Instructions
 
+### 1) Clone the repository
+
+```bash
+git clone <YOUR_REPO_URL>
+cd Field-Intelligence-Submittal
+```
+
+### 2) Confirm Python version
+Python 3.10+ is recommended.
+
+```bash
+python --version
+```
+
+### 3) Create and activate a virtual environment
+
+**macOS/Linux**
 ```bash
 python -m venv .venv
 source .venv/bin/activate
-pip install -r requirements.txt
+```
+
+**Windows (PowerShell)**
+```powershell
+python -m venv .venv
+.venv\Scripts\Activate.ps1
+```
+
+### 4) Upgrade pip tooling (recommended)
+
+```bash
+python -m pip install --upgrade pip setuptools wheel
+```
+
+### 5) Install dependencies
+
+```bash
+python -m pip install -r requirements.txt
+```
+
+### 6) Verify install (optional but recommended)
+
+```bash
+python -m py_compile main.py webapp.py crime_analyzer/*.py
 ```
 
 ## Usage
@@ -87,3 +127,7 @@ The output directory includes:
 - `top_10_communities.png`
 - `top_10_incident_types.png`
 
+## Troubleshooting
+- If `pip install -r requirements.txt` fails in a restricted network, configure your organization proxy/index and retry.
+- If `python webapp.py` fails with missing `flask`, ensure dependencies installed successfully in the active virtual environment.
+- If charts or report are missing, confirm input CSV contains parseable incident date/time and incident type/community fields.
